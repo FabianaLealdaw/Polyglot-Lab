@@ -1,0 +1,117 @@
+@import url("style.css");
+
+/* FOOTER BASE */
+footer {
+  background-color: var(--secondary-color);
+  padding: 4rem 6rem 2rem;
+  font-family: inherit;
+  color: var(--text-color);
+}
+
+/* CONTENEDOR PRINCIPAL */
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+/* COLUMNAS */
+footer .vision,
+footer .quick_links,
+footer .contact,
+footer .social_media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* VISION */
+footer .vision img {
+  margin-bottom: 1rem;
+}
+
+footer .vision p {
+  max-width: 320px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* TITULOS */
+footer h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* QUICK LINKS */
+footer .quick_links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+footer .quick_links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+footer .quick_links a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+footer .contact ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer .contact ul li {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* SOCIAL MEDIA */
+ footer .social_media ul {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+footer .social_media ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* LINEA SEPARADORA */
+
+footer .divide {
+  border-top: 1px solid var(--accent-color);
+  margin: 2rem 0;
+}
+
+/* COPYRIGHT */
+footer > p {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ICONOS REDES SOCIALES */
+footer .social_media a {
+  color: var(--accent-color); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover */
+footer .social_media a:hover {
+  color: var(--text-color); 
+  transform: scale(1.1);
+}
