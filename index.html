@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polyglat Lab</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/home.css" />
-    <link rel="stylesheet" href="CSS/get_a_quote.css" />
-    <link rel="stylesheet" href="CSS/courses.css" />
-    <link rel="stylesheet" href="CSS/contact.css" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Polyglot Lab</title>
 
+    <!-- Hojas de estilo CSS del proyecto -->
+    <!-- style.css: estilos generales -->
+    <link rel="stylesheet" href="CSS/style.css" >
+    <!-- home.css: estilos específicos de la página principal -->
+    <link rel="stylesheet" href="CSS/home.css" >
+    <!-- get_a_quote.css: estilos del formulario (aunque esté en el home, lo dejo cargado para que no se rompa) -->
+    <link rel="stylesheet" href="CSS/get_a_quote.css" >
+    <!-- courses.css: estilos de la sección de cursos -->
+    <link rel="stylesheet" href="CSS/courses.css" >
+    <!-- contact.css: estilos de la sección de contacto/mapa -->
+    <link rel="stylesheet" href="CSS/contact.css" >
+
+    <!-- Librería Font Awesome para iconos (redes sociales, etc.) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    >
+
+    <!-- Optimización y carga de la fuente desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
-    />
+    >
   </head>
+
   <body>
+   <!-- Header con navegación principal -->
     <header>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Primary navigation">
+        <!-- Enlaces principales del menú -->
         <a href="#inicio" class="active">Home</a>
-        <a href="./views/Courses.html">Courses</a>
+        <a href="./views/courses.html">Courses</a>
         <a href="./views/contact.html">Contact</a>
-        <a href="./views/Get_a_Quote.html">Get a Quote</a>
-    
+        <a href="./views/get_a_quote.html">Get a Quote</a>
+
+        <!-- Logo de la marca, enlazada al inicio de la página -->
         <a class="nav-logo" href="#inicio">
-          <img src="./assets/images/Logo_PL.png" alt="Polyglot Lab" />
+          <img src="./assets/images/Logo_PL.png" alt="Polyglot Lab" >
         </a>
-        <a href="./views/Get_a_Quote.html" class="nav-cta">Start now</a>
+
+        <!-- Botón CTA principal del menú -->
+        <a href="./views/get_a_quote.html" class="nav-cta">Start now</a>
       </nav>
     </header>
 
-    <main>
+    <!-- Contenido principal de la página -->
+    <main id="inicio">
+      <!-- Sección hero / presentación -->
       <section class="hero">
         <h1>One Lab. Many languages. One world.</h1>
         <p><i>Languages aren’t meant to stay in books.</i></p>
@@ -51,150 +69,150 @@
         <p>Experiment. Practice. Speak.</p>
       </section>
 
-     <section class="courses" id="courses">
+      <!-- Sección de cursos -->
+      <section class="courses" id="courses">
         <h2 class="courses-title">Our languages</h2>
         <p class="courses-subtitle">
           We offer comprehensive programs in the most in-demand languages,
           taught by native and certified teachers.
         </p>
 
+        <!-- Contenedor de las tarjetas de cursos -->
         <div class="courses-wrap">
+
+          <!-- Tarjeta de curso: English -->
           <article class="course-card">
             <img
               class="course-img"
-              src="../assets/images/english.svg"
+              src="./assets/images/english.svg"
               alt="English course"
-            />
+            >
             <h3 class="course-name">English</h3>
 
+            <!-- Información desplegable del curso -->
             <details class="course-details">
               <summary class="course-more">Ver más</summary>
-
               <p class="course-desc">
                 Build confidence in speaking, improve listening, and master
                 everyday grammar with real-life practice.
               </p>
-
-              <a class="course-cta" href="Get_a_Quote.html">Start now</a>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
             </details>
           </article>
 
+          <!-- Tarjeta de curso: Spanish -->
           <article class="course-card">
             <img
               class="course-img"
-              src="../assets/images/spanish.svg"
+              src="./assets/images/spanish.svg"
               alt="Spanish course"
-            />
+            >
             <h3 class="course-name">Spanish</h3>
 
             <details class="course-details">
               <summary class="course-more">Ver más</summary>
-
               <p class="course-desc">
                 Learn practical Spanish for travel, work, and daily life with
                 interactive conversation-based lessons.
               </p>
-
-              <a class="course-cta" href="Get_a_Quote.html">Start now</a>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
             </details>
           </article>
 
+          <!-- Tarjeta de curso: Italian -->
           <article class="course-card">
             <img
               class="course-img"
-              src="../assets/images/italian.svg"
+              src="./assets/images/italian.svg"
               alt="Italian course"
-            />
+            >
             <h3 class="course-name">Italian</h3>
 
             <details class="course-details">
               <summary class="course-more">Ver más</summary>
-
               <p class="course-desc">
                 A friendly approach to Italian with pronunciation, essentials,
                 and culture so you can speak from day one.
               </p>
-
-              <a class="course-cta" href="Get_a_Quote.html">Start now</a>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
             </details>
           </article>
 
-              <article class="course-card">
-                <img
-                  class="course-img"
-                  src="../assets/images/french.svg"
-                  alt="French course"
-                />
-                <h3 class="course-name">French</h3>
+          <!-- Tarjeta de curso: French -->
+          <article class="course-card">
+            <img
+              class="course-img"
+              src="./assets/images/french.svg"
+              alt="French course"
+            >
+            <h3 class="course-name">French</h3>
 
-                <details class="course-details">
-                  <summary class="course-more">Ver más</summary>
+            <details class="course-details">
+              <summary class="course-more">Ver más</summary>
+              <p class="course-desc">
+                Improve your pronunciation, build essential vocabulary, and
+                start having real conversations from the very first lessons.
+              </p>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
+            </details>
+          </article>
 
-                  <p class="course-desc">
-                    Improve your pronunciation, build essential vocabulary, and
-                    start having real conversations from the very first lessons.
-                  </p>
+          <!-- Tarjeta de curso: Deutsch -->
+          <article class="course-card">
+            <img
+              class="course-img"
+              src="./assets/images/deutsch.svg"
+              alt="German course"
+            >
+            <h3 class="course-name">Deutsch</h3>
 
-                  <a class="course-cta" href="Get_a_Quote.html">Start now</a>
-                </details>
-              </article>
+            <details class="course-details">
+              <summary class="course-more">Ver más</summary>
+              <p class="course-desc">
+                Learn practical German with clear structure: grammar made
+                simple, useful phrases, and speaking practice for everyday
+                situations.
+              </p>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
+            </details>
+          </article>
 
-              <article class="course-card">
-                <img
-                  class="course-img"
-                  src="../assets/images/deutsch.svg"
-                  alt="German course"
-                />
-                <h3 class="course-name">Deutsch</h3>
+          <!-- Tarjeta de curso: Korean -->
+          <article class="course-card">
+            <img
+              class="course-img"
+              src="./assets/images/korean.svg"
+              alt="Korean course"
+            >
+            <h3 class="course-name">Korean</h3>
 
-                <details class="course-details">
-                  <summary class="course-more">Ver más</summary>
+            <details class="course-details">
+              <summary class="course-more">Ver más</summary>
+              <p class="course-desc">
+                Master Hangul quickly, improve pronunciation, and build solid
+                speaking skills with fun, step-by-step lessons and real-life
+                dialogues.
+              </p>
+              <a class="course-cta" href="./views/get_a_quote.html">Start now</a>
+            </details>
+          </article>
 
-                  <p class="course-desc">
-                    Learn practical German with clear structure: grammar made
-                    simple, useful phrases, and speaking practice for everyday
-                    situations.
-                  </p>
-
-                  <a class="course-cta" href="Get_a_Quote.html">Start now</a>
-                </details>
-              </article>
-
-              <article class="course-card">
-                <img
-                  class="course-img"
-                  src="../assets/images/korean.svg"
-                  alt="Korean course"
-                />
-                <h3 class="course-name">Korean</h3>
-
-                <details class="course-details">
-                  <summary class="course-more">Ver más</summary>
-
-                  <p class="course-desc">
-                    Master Hangul quickly, improve pronunciation, and build
-                    solid speaking skills with fun, step-by-step lessons and
-                    real-life dialogues.
-                  </p>
-
-                  <a class="course-cta" href="Get_a_Quote.html">Start now</a>
-                </details>
-              </article>
         </div>
       </section>
-        <section class="contact-map">
-        <h1 class="contact-title">Find us</h1>
 
+      <!-- Sección de mapa / localización -->
+      <section class="contact-map">
+        <h2 class="contact-title">Find us</h2>
         <div class="map-wrapper">
           <img
-            src="../assets/images/map-polyglot_lab.svg"
+            src="./assets/images/map-polyglot_lab.svg"
             alt="Polyglot Lab location map"
             class="map-img"
-          />
+          >
         </div>
       </section>
 
-      </section>
+      <!-- Sección del formulario -->
       <section>
         <form
           id="formulario-web"
@@ -203,35 +221,18 @@
           method="POST"
           action="#"
         >
-          <!-- Formulario -->
+          <!-- Título del formulario -->
           <h2>Get a Quote!</h2>
 
+          <!-- Campos del formulario -->
           <label for="nombre">Name</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Your Name"
-            required
-          />
+          <input type="text" id="nombre" name="nombre" placeholder="Your Name" required >
 
           <label for="correo">Mail</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            placeholder="your@email.com"
-            required
-          />
+          <input type="email" id="correo" name="correo" placeholder="your@email.com" required >
 
           <label for="telefono">Phone number</label>
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="123 456 789"
-            required
-          />
+          <input type="tel" id="telefono" name="telefono" placeholder="123 456 789" required >
 
           <label for="descripcion">Tell us more about you</label>
           <textarea
@@ -241,39 +242,45 @@
             rows="5"
           ></textarea>
 
+          <!-- Checkbox de política de privacidad -->
           <div class="privacy">
-            <input type="checkbox" id="privacy" name="privacy" required />
+            <input type="checkbox" id="privacy" name="privacy" required >
             <label for="privacy">
               I accept the
               <a href="./views/privacy.html" target="_blank">Privacy Policy</a>
             </label>
           </div>
 
+          <!-- Botón de envío -->
           <button type="submit">Send</button>
         </form>
       </section>
     </main>
 
+    <!-- Footer de la web -->
     <footer>
       <div>
+        <!-- Bloque de identidad / visión -->
         <div class="vision">
-          <img src="./assets/images/Logo_PL.png" alt="Logo" width="200" />
+          <img src="./assets/images/Logo_PL.png" alt="Logo" width="200" >
           <p>
             Your language lab, where the passion for learning meets academic
             excellence in a warm and welcoming environment.
           </p>
         </div>
 
+        <!-- Enlaces rápidos -->
         <div class="quick_links">
           <h3>Quick Links</h3>
           <nav>
             <a href="#inicio">Home</a>
-            <a href="./views/Courses.html">Courses</a>
+            <a href="./views/courses.html">Courses</a>
             <a href="./views/contact.html">Contact</a>
-            <a href="./views/Get_a_Quote.html">Get a Quote</a>
+            <a href="./views/get_a_quote.html">Get a Quote</a>
           </nav>
         </div>
 
+        <!-- Información de contacto -->
         <div class="contact">
           <h3>Contact</h3>
           <ul>
@@ -282,9 +289,10 @@
             <li>Learning Street 123 Barcelona, Spain</li>
           </ul>
         </div>
+
+        <!-- Redes sociales -->
         <div class="social_media">
           <h3>Social media</h3>
-
           <ul>
             <li>
               <a href="https://www.linkedin.com/company/polyglot-lab">
@@ -299,7 +307,11 @@
           </ul>
         </div>
       </div>
+
+      <!-- Separador visual del footer -->
       <div class="divide"></div>
+
+      <!-- Copyright -->
       <p>Copyright 2025</p>
     </footer>
   </body>

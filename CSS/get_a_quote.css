@@ -1,24 +1,21 @@
-/* ==== MAIN BACKGROUND */
+/* Fondo del contenido principal */
 main {
-  place-items: center;
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #fdfbe8 0%, #eef6df 100%);
-  
 }
 
-/* ==== FORM CARD ==== */
+/* Tarjeta del formulario centrada */
 .formulario {
-  margin-bottom: 6rem;  
   width: min(720px, 92vw);
-  background-color: #DF6D69;              
-  border: 6px solid #B0D7C3;              
+  background-color: #df6d69;
+  border: 6px solid #b0d7c3;
   padding: 3.5rem 4rem 2.2rem;
   box-sizing: border-box;
-  color: #FCFAE7;
+  color: #fcfae7;
   margin: 2% auto;
 }
 
-/* TITULO */
+/* Título del formulario centrado */
 .formulario h2 {
   margin: 0 0 2.5rem;
   text-align: center;
@@ -27,17 +24,17 @@ main {
   letter-spacing: 0.5px;
 }
 
-/* LABELS */
+/* Labels en bloque */
 .formulario label {
   display: block;
   margin-top: 1.4rem;
   margin-bottom: 0.6rem;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #FCFAE7;
+  color: #fcfae7;
 }
 
-/* INPUTS + TEXTAREA */
+/* Inputs y textarea a ancho completo */
 .formulario input,
 .formulario textarea {
   width: 100%;
@@ -46,7 +43,7 @@ main {
   border-bottom: 2px solid rgba(0, 0, 0, 0.35);
   padding: 0.7rem 0.2rem;
   font-size: 1.15rem;
-  color: #FCFAE7;
+  color: #fcfae7;
   outline: none;
   box-sizing: border-box;
 }
@@ -58,7 +55,7 @@ main {
   color: rgba(0, 0, 0, 0.35);
 }
 
-/* Textarea */
+/* Ajustes específicos del textarea */
 .formulario textarea {
   border-bottom: 2px solid rgba(0, 0, 0, 0.35);
   resize: none;
@@ -66,38 +63,43 @@ main {
   margin-bottom: 1.2rem;
 }
 
-/* FOCUS */
+/* Estado focus */
 .formulario input:focus,
 .formulario textarea:focus {
   border-bottom-color: rgba(0, 0, 0, 0.6);
 }
 
-/* ==== BUTTON ==== */
+/* Botón principal */
 .formulario button {
   width: 100%;
   margin-top: 2.2rem;
-  background-color: #B0D7C3;
+  background-color: #b0d7c3;
   border: none;
   padding: 1.2rem 1rem;
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #FCFAE7;
+  color: #fcfae7;
   cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
+/* Hover */
 .formulario button:hover {
   transform: translateY(-2px);
   opacity: 0.95;
 }
 
+/* Active */
 .formulario button:active {
   transform: translateY(0);
   opacity: 0.9;
 }
-/* ==== PRIVACY CHECKBOX ==== */
+
+/* Contenedor del checkbox de privacidad */
 .formulario .privacy {
   display: flex;
   align-items: flex-start;
@@ -107,29 +109,32 @@ main {
   line-height: 1.4;
 }
 
+/* Checkbox */
 .formulario .privacy input[type="checkbox"] {
   width: auto;
   margin-top: 0.25rem;
-  accent-color: #B0D7C3; /* color del check */
+  accent-color: #b0d7c3;
   cursor: pointer;
 }
 
+/* Label del checkbox */
 .formulario .privacy label {
   margin: 0;
   font-weight: 400;
-  color: #FCFAE7;
+  color: #fcfae7;
 }
 
+/* Link dentro del texto */
 .formulario .privacy a {
-  color: #FCFAE7;
+  color: #fcfae7;
   text-decoration: underline;
 }
 
+/* Hover del link */
 .formulario .privacy a:hover {
   opacity: 0.85;
 }
 
-/* ==== RESPONSIVE ==== */
 @media (max-width: 640px) {
   .formulario {
     padding: 2.5rem 1.8rem 1.8rem;
@@ -145,4 +150,3 @@ main {
     font-size: 1.05rem;
   }
 }
-

@@ -1,48 +1,54 @@
 /*===================
     VARIABLES
 ===================*/
+
+/* Importo los estilos del footer desde otro archivo */
 @import url("footer.css");
+
+/* Variables globales */
 :root {
   --primary-color: #fcfae7;
   --secondary-color: #b0d7c3;
   --text-color: #545454;
   --accent-color: #df6d69;
 
+  /* Altura del header para ajustar el padding del body */
   --header-height: 120px;
 
   /* Modo oscuro (dk)*/
   --color-bg-dk: #222;
   --color-text-dk: #ffffff;
 
-  /* Modo claro (lh)*/
-  --color-bg-lh: #f5f5f5;
-  --color-text-lh: #222;
-
   /* Variables actuales */
-  --color-bg-current: var(--color-bg-dk);
+  --color-bg-current: var(--color-bg-lh);
   --color-text-current: var(--color-text-dk);
   --color-accent-current: var(--accent-color);
 }
+
 /* ===================
     RESET Y BASE
 =================== */
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos base del body */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--primary-color);
+  color: var(--text-color);
   font-family: "Vend Sans", sans-serif;
   padding-top: var(--header-height);
   background: linear-gradient(135deg, #fcfae7 0%, #eef6df 100%);
 }
 
+/* Color general de los enlaces */
 a {
   color: var(--color-text-current);
 }
@@ -51,6 +57,7 @@ a {
     HEADER
 ===================*/
 
+/* Header fijo */
 header {
   position: fixed;
   top: 0;
@@ -62,40 +69,47 @@ header {
   padding: 2.5rem;
   background-color: var(--secondary-color);
 }
+
+/* Contenedor del menú de navegación */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 70px;
+  gap: 20px;
   position: relative;
-
-  padding-left: 260px;
-  padding-right: 260px;
+  padding-left: 0;
+  padding-right: 0;
+  flex-wrap: wrap;
 }
 
+/* Estilo base de los enlaces del navbar */
 .navbar a {
   text-decoration: none;
   font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
 }
 
+/* Enlace activo (página en la que estoy) */
 .navbar a.active {
   color: var(--accent-color);
   font-weight: 600;
 }
 
+/* Logo colocado a la izquierda dentro del header */
 .nav-logo {
   position: absolute;
   left: 2.5rem;
   text-decoration: none;
 }
 
+/* Tamaño del logo */
 .nav-logo img {
   width: 160px;
   height: auto;
 }
 
+/* Botón CTA colocado a la derecha */
 .nav-cta {
   position: absolute;
   right: 2.5rem;
@@ -105,14 +119,16 @@ header {
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.2s background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* Hover del botón CTA */
 .nav-cta:hover {
   background: var(--accent-color);
   color: var(--primary-color);
 }
 
+/* Hover para links normales del navbar (menos el botón) */
 .navbar a:not(.nav-cta):hover {
   color: var(--color-accent-current);
 }

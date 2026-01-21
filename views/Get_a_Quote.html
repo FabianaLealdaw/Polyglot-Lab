@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote</title>
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/get_a_quote.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- CSS general del proyecto + CSS específico del formulario -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/get_a_quote.css">
+
+    <!-- Fuente del proyecto (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
-    />
+    >
+
+    <!-- Librería de iconos (Font Awesome) -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    >
   </head>
+
   <body>
+    <!-- Header con navegación principal -->
     <header>
       <nav class="navbar">
         <a href="../index.html">Home</a>
-        <a href="/views/Courses.html">Courses</a>
-        <a href="/views/contact.html">Contact</a>
+        <a href="../views/courses.html">Courses</a>
+        <a href="../views/contact.html">Contact</a>
         <a href="#" class="active">Get a Quote</a>
 
-        <a class="nav-logo" href="#inicio">
-          <img src="../assets/images/Logo_PL.png" alt="Polyglot Lab" />
+        <!-- Logo que vuelve a la página principal -->
+        <a class="nav-logo" href="../index.html">
+          <img src="../assets/images/Logo_PL.png" alt="Polyglot Lab">
         </a>
-        <a href="./Get_a_Quote.html" class="nav-cta">Start now</a>
+
+        <!-- CTA que baja directamente al formulario -->
+        <a href="#formulario-web" class="nav-cta">Start now</a>
       </nav>
-      
     </header>
+
     <main>
+      <!-- Formulario para pedir presupuesto -->
       <form
         id="formulario-web"
         class="formulario"
@@ -40,9 +52,9 @@
         method="POST"
         action="#"
       >
-        <!-- Formulario -->
         <h2>Get a Quote!</h2>
 
+        <!-- Campo: nombre -->
         <label for="nombre">Name</label>
         <input
           type="text"
@@ -50,8 +62,9 @@
           name="nombre"
           placeholder="Your Name"
           required
-        />
+        >
 
+        <!-- Campo: email -->
         <label for="correo">Mail</label>
         <input
           type="email"
@@ -59,8 +72,9 @@
           name="correo"
           placeholder="your@email.com"
           required
-        />
+        >
 
+        <!-- Campo: teléfono -->
         <label for="telefono">Phone number</label>
         <input
           type="tel"
@@ -68,8 +82,9 @@
           name="telefono"
           placeholder="123 456 789"
           required
-        />
+        >
 
+        <!-- Campo: descripción -->
         <label for="descripcion">Tell us more about you</label>
         <textarea
           id="descripcion"
@@ -78,21 +93,25 @@
           rows="5"
         ></textarea>
 
-         <div class="privacy">
-            <input type="checkbox" id="privacy" name="privacy" required />
-            <label for="privacy">
-              I accept the
-              <a href="./privacy.html" target="_blank">Privacy Policy</a>
-            </label>
-          </div>
+        <!-- Aceptación de política de privacidad -->
+        <div class="privacy">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">
+            I accept the
+            <a href="./privacy.html" target="_blank">Privacy Policy</a>
+          </label>
+        </div>
 
+        <!-- Botón de envío -->
         <button type="submit">Send</button>
       </form>
     </main>
+
+    <!-- Footer con info de la marca, links y redes -->
     <footer>
       <div>
         <div class="vision">
-          <img src="../assets/images/Logo_PL.png" alt="Logo" width="200" />
+          <img src="../assets/images/Logo_PL.png" alt="Logo" width="200">
           <p>
             Your language lab, where the passion for learning meets academic
             excellence in a warm and welcoming environment.
@@ -103,10 +122,9 @@
           <h3>Quick Links</h3>
           <nav>
             <a href="../index.html">Home</a>
-            <a href="../views/Courses.html">Courses</a>
+            <a href="../views/courses.html">Courses</a>
             <a href="../views/contact.html">Contact</a>
-            <a href="/views/Get_a_Quote.html">Get a Quote</a>
-            
+            <a href="./get_a_quote.html">Get a Quote</a>
           </nav>
         </div>
 
@@ -118,9 +136,9 @@
             <li>Learning Street 123 Barcelona, Spain</li>
           </ul>
         </div>
+
         <div class="social_media">
           <h3>Social media</h3>
-
           <ul>
             <li>
               <a href="https://www.linkedin.com/company/polyglot-lab">
@@ -135,6 +153,7 @@
           </ul>
         </div>
       </div>
+
       <div class="divide"></div>
       <p>Copyright 2025</p>
     </footer>
