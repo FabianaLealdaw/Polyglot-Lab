@@ -7,7 +7,6 @@
 
     <!-- CSS general del proyecto + CSS específico del formulario -->
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/get_a_quote.css">
 
     <!-- Fuente del proyecto (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +48,6 @@
         id="formulario-web"
         class="formulario"
         name="webForm"
-        method="POST"
         action="#"
       >
         <h2>Get a Quote!</h2>
@@ -62,6 +60,8 @@
           name="nombre"
           placeholder="Your Name"
           required
+          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}$"
+          title="Only letters and spaces allowed"
         >
 
         <!-- Campo: email -->
@@ -72,7 +72,9 @@
           name="correo"
           placeholder="your@email.com"
           required
-        >
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Please enter a valid email address">
+        <input>
 
         <!-- Campo: teléfono -->
         <label for="telefono">Phone number</label>
@@ -82,15 +84,18 @@
           name="telefono"
           placeholder="123 456 789"
           required
-        >
+          pattern="^[0-9]{9,15}$"
+          title="Enter a valid phone number">
+        <input>
 
         <!-- Campo: descripción -->
-        <label for="descripcion">Tell us more about you</label>
+        <label for="descripcion">Description</label>
         <textarea
           id="descripcion"
           name="descripcion"
           placeholder="Tell us more about you..."
           rows="5"
+          title="Description must be between 10 and 300 characters"
         ></textarea>
 
         <!-- Aceptación de política de privacidad -->

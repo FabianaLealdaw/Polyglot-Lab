@@ -132,3 +132,578 @@ header {
 .navbar a:not(.nav-cta):hover {
   color: var(--color-accent-current);
 }
+
+/*===================
+    MAIN
+===================*/
+/* Contenedor principal: grid de 2 columnas, altura de pantalla menos header */
+.hero {
+  min-height: calc(100vh - var(--header-height));
+  padding: 6rem 8rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #FCFAE7 0%,
+    #EEF6DF 100%
+  );
+}
+
+/* Título colocado en la segunda columna, alineado a la derecha */
+.hero h1 {
+  grid-column: 2;
+  justify-self: end;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 700px;
+  text-align: right;
+  color: #4a4a4a;
+}
+
+/* Párrafos en la primera columna con margen interno izquierdo */
+.hero p {
+  grid-column: 1;
+  max-width: 900px;
+  text-align: left;
+  padding-left: 3.5rem;
+}
+
+/* Primer párrafo estilizado como cita */
+.hero p:first-of-type {
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #545454;
+}
+
+/* Segundo párrafo como texto principal */
+.hero p:nth-of-type(2) {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #545454;
+}
+
+/* Último párrafo como cierre con peso medio */
+.hero p:last-of-type {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #545454;
+}
+/*===================
+    COURSES SECTION
+===================*/
+/* Sección principal de cursos */
+.courses {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Título principal */
+.courses-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtítulo centrado con ancho limitado */
+.courses-subtitle {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* Contenedor flexible de tarjetas */
+.courses-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 2.2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Tarjeta individual de curso */
+.course-card {
+  width: calc(33.333% - 1.5rem);
+  max-width: 280px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  padding: 1.2rem 1.2rem 1.4rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablet: dos columnas */
+@media (max-width: 900px) {
+  .course-card {
+    width: calc(50% - 1.5rem);
+  }
+}
+
+/* Móvil: una columna */
+@media (max-width: 500px) {
+  .course-card {
+    width: 100%;
+  }
+}
+
+/* Imagen del curso */
+.course-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+}
+
+/* Nombre del curso */
+.course-name {
+  margin: 1rem 0 0.6rem;
+  font-size: 1.25rem;
+}
+
+/* Contenedor de detalles */
+.course-details {
+  margin-top: auto;
+}
+
+/* Botón resumen de detalles */
+.course-more {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease;
+  list-style: none;
+}
+
+/* Quitar marcador por defecto */
+.course-more::-webkit-details-marker {
+  display: none;
+}
+
+/* Estado abierto */
+.course-details[open] .course-more {
+  transform: translateY(-1px);
+}
+
+/* Descripción del curso */
+.course-desc {
+  margin: 0.9rem 0 1rem;
+  line-height: 1.55;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+/* Botón de acción */
+.course-cta {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: #e86b63;
+  color: #fff;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+/* Hover del botón */
+.course-cta:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+      
+/*===================
+    CONTACT SECTION 
+===================*/
+/* layout para footer abajo */
+html, body{
+  height: 100%;
+  margin: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+/* area central */
+.contact-page{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* contenedor */
+.contact-map{
+  width: 100%;
+  text-align: center;
+}
+
+/* título grande tipo screenshot */
+.contact-title{
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 2rem;
+  color: #df6d69; /* coral */
+  letter-spacing: 1px;
+}
+
+/* marco coral + tamaño del mapa */
+.map-wrapper{
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 10px;              
+  border: 4px solid #df6d69;  
+  border-radius: 10px;       
+  background: transparent;
+}
+
+/* la imagen del mapa */
+.map-img{
+  width: 100%;
+  height: 520px;       
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.map-container {
+  margin-top: 2rem;
+}
+
+.contact-info {
+  text-align: center;
+  max-width: 400px;
+  margin: 2.5rem auto 0 auto;
+}
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 6rem;
+}
+/*===================
+    GET A QUOTE SECTION 
+===================*/
+/* Fondo del contenido principal */
+main {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fdfbe8 0%, #eef6df 100%);
+}
+
+/* Tarjeta del formulario centrada */
+.formulario {
+  width: min(720px, 92vw);
+  background-color: #df6d69;
+  border: 6px solid #b0d7c3;
+  padding: 3.5rem 4rem 2.2rem;
+  box-sizing: border-box;
+  color: #fcfae7;
+  margin: 2% auto;
+}
+
+/* Título del formulario centrado */
+.formulario h2 {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Labels en bloque */
+.formulario label {
+  display: block;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fcfae7;
+}
+
+/* Inputs y textarea a ancho completo */
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+  padding: 0.7rem 0.2rem;
+  font-size: 1.15rem;
+  color: #fcfae7;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Placeholder en cursiva */
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+/* Ajustes específicos del textarea */
+.formulario textarea {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+  resize: none;
+  padding-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Estado focus */
+.formulario input:focus,
+.formulario textarea:focus {
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Botón principal */
+.formulario button {
+  width: 100%;
+  margin-top: 2.2rem;
+  background-color: #b0d7c3;
+  border: none;
+  padding: 1.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fcfae7;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+/* Hover */
+.formulario button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Active */
+.formulario button:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/* Contenedor del checkbox de privacidad */
+.formulario .privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Checkbox */
+.formulario .privacy input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.25rem;
+  accent-color: #b0d7c3;
+  cursor: pointer;
+}
+
+/* Label del checkbox */
+.formulario .privacy label {
+  margin: 0;
+  font-weight: 400;
+  color: #fcfae7;
+}
+
+/* Link dentro del texto */
+.formulario .privacy a {
+  color: #fcfae7;
+  text-decoration: underline;
+}
+
+/* Hover del link */
+.formulario .privacy a:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .formulario {
+    padding: 2.5rem 1.8rem 1.8rem;
+    border-width: 5px;
+  }
+
+  .formulario label {
+    font-size: 1.05rem;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    font-size: 1.05rem;
+  }
+}
+
+/*===================
+    FOOTER SECTION 
+===================*/
+/* FOOTER BASE */
+footer {
+  background-color: var(--secondary-color);
+  padding: 4rem 6rem 2rem;
+  font-family: inherit;
+  color: var(--text-color);
+}
+
+/* CONTENEDOR PRINCIPAL */
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+/* COLUMNAS */
+footer .vision,
+footer .quick_links,
+footer .contact,
+footer .social_media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* VISION */
+footer .vision img {
+  margin-bottom: 1rem;
+}
+
+footer .vision p {
+  max-width: 320px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* TITULOS */
+footer h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* QUICK LINKS */
+footer .quick_links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+footer .quick_links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+footer .quick_links a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+footer .contact ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer .contact ul li {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* SOCIAL MEDIA */
+footer .social_media ul {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+footer .social_media ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* LINEA SEPARADORA */
+
+footer .divide {
+  border-top: 1px solid var(--accent-color);
+  margin: 2rem 0;
+}
+
+/* COPYRIGHT */
+footer > p {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ICONOS REDES SOCIALES */
+footer .social_media a {
+  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover */
+footer .social_media a:hover {
+  color: var(--text-color);
+  transform: scale(1.1);
+}
+
+/*===================
+    PRIVACY SECTION 
+===================*/
+/* ==== Pagina de Privacy ==== */
+.privacy-page {
+  max-width: 900px;
+  margin: 4rem auto 6rem;
+  padding: 0 2rem;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.privacy-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.privacy-page h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.privacy-page ul {
+  margin-left: 1.2rem;
+}
+
+.privacy-footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
