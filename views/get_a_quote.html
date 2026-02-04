@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote</title>
 
-    <!-- CSS general del proyecto + CSS específico del formulario -->
+    <!-- CSS general del proyecto-->
     <link rel="stylesheet" href="../CSS/style.css">
 
     <!-- Fuente del proyecto (Google Fonts) -->
@@ -29,9 +29,10 @@
       <nav class="navbar">
         <a href="../index.html">Home</a>
         <a href="../views/courses.html">Courses</a>
+        <a href="../views/gallery.html">Gallery</a>
         <a href="../views/contact.html">Contact</a>
         <a href="#" class="active">Get a Quote</a>
-
+        
         <!-- Logo que vuelve a la página principal -->
         <a class="nav-logo" href="../index.html">
           <img src="../assets/images/Logo_PL.png" alt="Polyglot Lab">
@@ -44,6 +45,7 @@
 
     <main>
       <!-- Formulario para pedir presupuesto -->
+<<<<<<< HEAD
       <form
         id="formulario-web"
         class="formulario"
@@ -97,19 +99,137 @@
           rows="5"
           title="Description must be between 10 and 300 characters"
         ></textarea>
+=======
+        <form id="formulario-web" class="formulario" name="webForm">
+          <h2>Get a Quote!</h2>
 
-        <!-- Aceptación de política de privacidad -->
-        <div class="privacy">
-          <input type="checkbox" id="privacy" name="privacy" required>
-          <label for="privacy">
-            I accept the
-            <a href="./privacy.html" target="_blank">Privacy Policy</a>
-          </label>
-        </div>
+          <!-- =====================
+              CONTACT INFORMATION
+              ===================== -->
 
-        <!-- Botón de envío -->
-        <button type="submit">Send</button>
-      </form>
+          <!-- Campo: nombre -->
+          <label for="nombre">Name</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Your Name"
+            required
+            pattern="[A-Za-zÀ-ÿ\s]{1,15}"
+          />
+
+          <!-- Campo: apellidos -->
+          <label for="apellidos">Surname</label>
+          <input
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            placeholder="Your Surname"
+            required
+            pattern="[A-Za-zÀ-ÿ\s]{1,40}"
+          />
+
+          <!-- Campo: email -->
+          <label for="correo">Email</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="your@email.com"
+            required
+          />
+>>>>>>> 964b536 (Actualiza la estructura de courses.html: elimina CSS innecesario, ajusta enlaces y añade atributos de tamaño a las imágenes de los cursos.)
+
+          <!-- Campo: teléfono -->
+          <label for="telefono">Phone number</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="123456789"
+            required
+            pattern="[0-9]{9}"
+          />
+
+          <!-- =====================
+              COURSE SELECTION
+              ===================== -->
+
+          <label for="curso">Choose a course</label>
+          <select id="curso" name="curso">
+            <option value="300">General English – 300€</option>
+            <option value="450">Intensive Course – 450€</option>
+            <option value="250">Online Course – 250€</option>
+          </select>
+
+          <label for="meses">Number of months</label>
+          <input
+            type="number"
+            id="meses"
+            name="meses"
+            min="1"
+            max="12"
+            value="1"
+          />
+
+          <!-- =====================
+              EXTRAS
+              ===================== -->
+
+          <fieldset class="extras">
+            <legend>Extras</legend>
+
+            <label>
+              <input type="checkbox" class="extra" value="50" />
+              <span>Conversation workshops (+50€)</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="extra" value="30" />
+              <span>Learning materials (+30€)</span>
+            </label>
+
+            <label>
+              <input type="checkbox" class="extra" value="70" />
+              <span>Exam preparation (+70€)</span>
+            </label>
+
+          </fieldset>
+
+          <!-- =====================
+              TOTAL PRICE
+              ===================== -->
+
+          <p id="total-price">Total: €0</p>
+
+          <!-- Aceptación de política de privacidad -->
+          <div class="privacy">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">
+              I accept the
+              <a href="./privacy.html" target="_blank">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Botón de envío -->
+          <button type="submit">Send</button>
+        </form>
+          <!-- Resumen del presupuesto generado por JavaScript -->
+        <section id="quote-result" class="quote-result" hidden>
+          <h3>Your quote summary</h3>
+
+          <p><strong>Course:</strong> <span id="summary-course"></span></p>
+          <p><strong>Months:</strong> <span id="summary-months"></span></p>
+          <p><strong>Extras:</strong></p>
+          <ul id="summary-extras"></ul>
+
+          <p class="final-price">
+            Total price: <span id="summary-total"></span>
+          </p>
+
+          <a href="./get_a_quote.html" class="edit-quote">Edit quote</a>
+        </section>
+
     </main>
 
     <!-- Footer con info de la marca, links y redes -->
@@ -128,6 +248,7 @@
           <nav>
             <a href="../index.html">Home</a>
             <a href="../views/courses.html">Courses</a>
+            <a href="./gallery.html">Gallery</a>
             <a href="../views/contact.html">Contact</a>
             <a href="./get_a_quote.html">Get a Quote</a>
           </nav>
@@ -162,5 +283,7 @@
       <div class="divide"></div>
       <p>Copyright 2025</p>
     </footer>
+    <script src="../js/budget.js"></script>
+
   </body>
 </html>

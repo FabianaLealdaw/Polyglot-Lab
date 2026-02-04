@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="gallery" class="gallery">
+      <img src="https://picsum.photos/id/10/300/200" alt="" width="500" />
+      <img src="https://picsum.photos/id/20/300/200" alt="" width="500" />
+      <img src="https://picsum.photos/id/30/300/200" alt="" width="500" />
+      <img src="https://picsum.photos/id/40/300/200" alt="" width="500" />
+    </div>
+    <!-- Modal simple para ver imagen grande -->
+    <div id="modal" style="display: none">
+      <img id="modal-img" width="1080" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/galleryjsquery.js"></script>
+    <style>
+      .gallery {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
+        width: 100%;
+      }
+      .gallery img {
+        cursor: pointer;
+        border-radius: 8px;
+      }
+      #modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #modal img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        const $gallery = $("#gallery"); // Click para ver en grande 
+
+        $("#gallery").on("click", "img", function () { $("#modal-img").attr("src", $(this).attr("src")); $("#modal").fadeIn(); });
+
+        // Cerrar modal
+         $("#modal").on("click", function () { $(this).fadeOut(); });
+      });
+    </script>
+  </body>
+</html>
