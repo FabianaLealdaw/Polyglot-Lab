@@ -7,7 +7,6 @@
 
     <!-- CSS general del proyecto -->
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/contact.css">
 
     <!-- Fuente utilizada en el proyecto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +29,7 @@
       <nav class="navbar">
         <a href="../index.html">Home</a>
         <a href="./courses.html">Courses</a>
+        <a href="./gallery.html">Gallery</a>
         <a href="./contact.html" class="active">Contact</a>
         <a href="./get_a_quote.html">Get a Quote</a>
 
@@ -45,17 +45,31 @@
     <!-- Contenido principal de la página -->
     <main class="contact-page">
       <!-- Sección del mapa/ubicación -->
-      <section class="contact-map">
-        <h1 class="contact-title">Find us</h1>
+         <!-- Sección de mapa / localización -->
+      <section class="contact-section">
+        <h2 class="contact-title">Contact</h2>
+
+       <p class="contact-subtitle">Find us here or get in touch with us</p>
 
         <div class="map-wrapper">
-          <img
-            src="../assets/images/map-polyglot_lab.svg"
-            alt="Polyglot Lab location map"
-            class="map-img"
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.481295766449!2d2.14672907664942!3d41.38535299612065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a39cb4652ea5%3A0x241e477925055c9!2sAcademia%20de%20Cursos%20Profesionales%20y%20FP%20Davante%20%7C%20Barcelona!5e0!3m2!1ses!2ses!4v1770212097678!5m2!1ses!2ses"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           >
+          </iframe>
         </div>
       </section>
+      
+        <section class="contact-info">
+          <h2>Contact information</h2>
+          <p><strong>Polyglot Lab</strong></p>
+          <p>Learning Street 123</p>
+          <p>08001 Barcelona, Spain</p>
+          <p>Phone: +34 123 456 789</p>
+          <p>Email: info@polyglotlab.com</p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -75,6 +89,7 @@
           <nav>
             <a href="../index.html">Home</a>
             <a href="./courses.html">Courses</a>
+            <a href="./gallery.html">Gallery</a>
             <a href="./contact.html">Contact</a>
             <a href="./get_a_quote.html">Get a Quote</a>
           </nav>
@@ -112,5 +127,10 @@
       <div class="divide"></div>
       <p>Copyright 2025</p>
     </footer>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/map.js"></script>
+
   </body>
 </html>
